@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="chs_BTN_ACQUIREIMAGE" xml:space="preserve">
+    <value>执行采集图像</value>
+  </data>
+  <data name="chs_BTN_ADDCALIBRATIONSOLUTION" xml:space="preserve">
+    <value>添加标定方案</value>
+  </data>
+  <data name="chs_BTN_ANNULUS" xml:space="preserve">
+    <value>闭合圆环</value>
+  </data>
+  <data name="chs_BTN_CALCULATECALIBRATION" xml:space="preserve">
+    <value>计算标定结果</value>
+  </data>
+  <data name="chs_BTN_CIRCLE" xml:space="preserve">
+    <value>闭合圆形</value>
+  </data>
+  <data name="chs_BTN_CIRULARARC" xml:space="preserve">
+    <value>有向圆弧</value>
+  </data>
+  <data name="chs_BTN_DELETEACTIVEROI" xml:space="preserve">
+    <value>删除活动ROI</value>
+  </data>
+  <data name="chs_BTN_DELETEALLROI" xml:space="preserve">
+    <value>删除所有ROI</value>
+  </data>
+  <data name="chs_BTN_EXITCALIBRATION" xml:space="preserve">
+    <value>退出标定</value>
+  </data>
+  <data name="chs_BTN_LINE" xml:space="preserve">
+    <value>矢量线段</value>
+  </data>
+  <data name="chs_BTN_LOADIMAGE" xml:space="preserve">
+    <value>加载图像</value>
+  </data>
+  <data name="chs_BTN_MATCHLOCATION" xml:space="preserve">
+    <value>执行匹配定位</value>
+  </data>
+  <data name="chs_BTN_RECTANGLE1" xml:space="preserve">
+    <value>齐轴矩形</value>
+  </data>
+  <data name="chs_BTN_RECTANGLE2" xml:space="preserve">
+    <value>仿射矩形</value>
+  </data>
+  <data name="chs_BTN_RESETWINDOW" xml:space="preserve">
+    <value>重置窗口</value>
+  </data>
+  <data name="chs_BTN_SAVECALIBRATIONSOLUTION" xml:space="preserve">
+    <value>保存标定方案</value>
+  </data>
+  <data name="chs_BTN_SETMATCHMODEL" xml:space="preserve">
+    <value>设置匹配模型</value>
+  </data>
+  <data name="chs_BTN_TOOLOFFSET" xml:space="preserve">
+    <value>工具坐标偏移</value>
+  </data>
+  <data name="chs_BTN_VARIFYCALIBRATION" xml:space="preserve">
+    <value>验证标定结果</value>
+  </data>
+  <data name="chs_CHKB_ACQUIRECONTINUE" xml:space="preserve">
+    <value>启用连续采集</value>
+  </data>
+  <data name="chs_CHKB_ENABLEVERIDYCROSS" xml:space="preserve">
+    <value>启用定位十字</value>
+  </data>
+  <data name="chs_FRM_CALIBRATEPOINTBASED" xml:space="preserve">
+    <value>基于特点的标定</value>
+  </data>
+  <data name="chs_FRM_INTERACTIVEROI" xml:space="preserve">
+    <value>ROI交互式操作</value>
+  </data>
+  <data name="chs_GRPB_CALIBRATERESULT" xml:space="preserve">
+    <value>标定结果</value>
+  </data>
+  <data name="chs_GRPB_FEATUREPOINTTYPE" xml:space="preserve">
+    <value>特征点类型</value>
+  </data>
+  <data name="chs_GRPB_OPERATION" xml:space="preserve">
+    <value>操作功能</value>
+  </data>
+  <data name="chs_GRPB_SHAPEOPTION" xml:space="preserve">
+    <value>形状选项</value>
+  </data>
+  <data name="chs_GRPB_VIEWOPTION" xml:space="preserve">
+    <value>视图选项</value>
+  </data>
+  <data name="chs_LBL_POSITIONSTEP" xml:space="preserve">
+    <value>位置步长</value>
+  </data>
+  <data name="chs_LBL_CALIBRATEPHYSICALERROR" xml:space="preserve">
+    <value>物理误差</value>
+  </data>
+  <data name="chs_LBL_CALIBRATEPIXELERROR" xml:space="preserve">
+    <value>像素误差</value>
+  </data>
+  <data name="chs_LBL_CHAMFERANGLE" xml:space="preserve">
+    <value>斜切角(Theta)</value>
+  </data>
+  <data name="chs_LBL_ROTATEANGLE" xml:space="preserve">
+    <value>旋转角(Phi)</value>
+  </data>
+  <data name="chs_LBL_SCALEX" xml:space="preserve">
+    <value>水平缩放(Sx)</value>
+  </data>
+  <data name="chs_LBL_SCALEY" xml:space="preserve">
+    <value>垂直缩放(Sy)</value>
+  </data>
+  <data name="chs_LBL_TRANSLATEX" xml:space="preserve">
+    <value>水平偏移(Tx)</value>
+  </data>
+  <data name="chs_LBL_TRANSLATEY" xml:space="preserve">
+    <value>垂直偏移(Ty)</value>
+  </data>
+  <data name="chs_LBL_VERIFYCROSSCOL" xml:space="preserve">
+    <value>十字Col</value>
+  </data>
+  <data name="chs_LBL_VERIFYCROSSROW" xml:space="preserve">
+    <value>十字Row</value>
+  </data>
+  <data name="chs_RDBTN_FIXEDPOINT" xml:space="preserve">
+    <value>固定式特征点</value>
+  </data>
+  <data name="chs_RDBTN_MAGNIFY" xml:space="preserve">
+    <value>局部放大</value>
+  </data>
+  <data name="chs_RDBTN_MOBILEPOINT" xml:space="preserve">
+    <value>移动式特征点</value>
+  </data>
+  <data name="chs_RDBTN_MOVE" xml:space="preserve">
+    <value>移动图形</value>
+  </data>
+  <data name="chs_RDBTN_NONE" xml:space="preserve">
+    <value>恢复初态</value>
+  </data>
+  <data name="chs_RDBTN_ZOOM" xml:space="preserve">
+    <value>缩放图形</value>
+  </data>
+  <data name="en_BTN_ACQUIREIMAGE" xml:space="preserve">
+    <value>AcquireImage</value>
+  </data>
+  <data name="en_BTN_ADDCALIBRATIONSOLUTION" xml:space="preserve">
+    <value>AddCalbration</value>
+  </data>
+  <data name="en_BTN_ANNULUS" xml:space="preserve">
+    <value>Annulus</value>
+  </data>
+  <data name="en_BTN_CALCULATECALIBRATION" xml:space="preserve">
+    <value>CalculateCalibration</value>
+  </data>
+  <data name="en_BTN_CIRCLE" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="en_BTN_CIRULARARC" xml:space="preserve">
+    <value>CircularArc</value>
+  </data>
+  <data name="en_BTN_DELETEACTIVEROI" xml:space="preserve">
+    <value>Delete ActiveROI</value>
+  </data>
+  <data name="en_BTN_DELETEALLROI" xml:space="preserve">
+    <value>Delete AllROI</value>
+  </data>
+  <data name="en_BTN_EXITCALIBRATION" xml:space="preserve">
+    <value>ExitCalibration</value>
+  </data>
+  <data name="en_BTN_LINE" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="en_BTN_LOADIMAGE" xml:space="preserve">
+    <value>Load Image</value>
+  </data>
+  <data name="en_BTN_MATCHLOCATION" xml:space="preserve">
+    <value>LocateByMacth</value>
+  </data>
+  <data name="en_BTN_RECTANGLE1" xml:space="preserve">
+    <value>Rectangle1</value>
+  </data>
+  <data name="en_BTN_RECTANGLE2" xml:space="preserve">
+    <value>Rectangle2</value>
+  </data>
+  <data name="en_BTN_RESETWINDOW" xml:space="preserve">
+    <value>Reset Window</value>
+  </data>
+  <data name="en_BTN_SAVECALIBRATIONSOLUTION" xml:space="preserve">
+    <value>SaveCalibration</value>
+  </data>
+  <data name="en_BTN_SETMATCHMODEL" xml:space="preserve">
+    <value>SetMacthModel</value>
+  </data>
+  <data name="en_BTN_TOOLOFFSET" xml:space="preserve">
+    <value>ToolOffset</value>
+  </data>
+  <data name="en_BTN_VARIFYCALIBRATION" xml:space="preserve">
+    <value>VerifyCalibration</value>
+  </data>
+  <data name="en_CHKB_ACQUIRECONTINUE" xml:space="preserve">
+    <value>ContinuousAcquisition</value>
+  </data>
+  <data name="en_CHKB_ENABLEVERIDYCROSS" xml:space="preserve">
+    <value>EnableCross</value>
+  </data>
+  <data name="en_FRM_CALIBRATEPOINTBASED" xml:space="preserve">
+    <value>CalibrationBasedOnPoint</value>
+  </data>
+  <data name="en_FRM_INTERACTIVEROI" xml:space="preserve">
+    <value>ROI Interactive</value>
+  </data>
+  <data name="en_GRPB_CALIBRATERESULT" xml:space="preserve">
+    <value>CalibrationResult</value>
+  </data>
+  <data name="en_GRPB_FEATUREPOINTTYPE" xml:space="preserve">
+    <value>TypeOfFeaturePoint</value>
+  </data>
+  <data name="en_GRPB_OPERATION" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="en_GRPB_SHAPEOPTION" xml:space="preserve">
+    <value>Shape Option</value>
+  </data>
+  <data name="en_GRPB_VIEWOPTION" xml:space="preserve">
+    <value>View Option</value>
+  </data>
+  <data name="en_LBL_POSITIONSTEP" xml:space="preserve">
+    <value>PositionStep</value>
+  </data>
+  <data name="en_LBL_CALIBRATEPHYSICALERROR" xml:space="preserve">
+    <value>PhysicalError</value>
+  </data>
+  <data name="en_LBL_CALIBRATEPIXELERROR" xml:space="preserve">
+    <value>PixelError</value>
+  </data>
+  <data name="en_LBL_CHAMFERANGLE" xml:space="preserve">
+    <value>Angle(Theta)</value>
+  </data>
+  <data name="en_LBL_ROTATEANGLE" xml:space="preserve">
+    <value>Angle(Phi)</value>
+  </data>
+  <data name="en_LBL_SCALEX" xml:space="preserve">
+    <value>ScaleX</value>
+  </data>
+  <data name="en_LBL_SCALEY" xml:space="preserve">
+    <value>ScaleY</value>
+  </data>
+  <data name="en_LBL_TRANSLATEX" xml:space="preserve">
+    <value>TranslateX</value>
+  </data>
+  <data name="en_LBL_TRANSLATEY" xml:space="preserve">
+    <value>TranslateY</value>
+  </data>
+  <data name="en_LBL_VERIFYCROSSCOL" xml:space="preserve">
+    <value>CrossCol</value>
+  </data>
+  <data name="en_LBL_VERIFYCROSSROW" xml:space="preserve">
+    <value>CrossRow</value>
+  </data>
+  <data name="en_RDBTN_FIXEDPOINT" xml:space="preserve">
+    <value>FixedPoint</value>
+  </data>
+  <data name="en_RDBTN_MAGNIFY" xml:space="preserve">
+    <value>Magnify</value>
+  </data>
+  <data name="en_RDBTN_MOBILEPOINT" xml:space="preserve">
+    <value>MobilePoint</value>
+  </data>
+  <data name="en_RDBTN_MOVE" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="en_RDBTN_NONE" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="en_RDBTN_ZOOM" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Icn_Location" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Location.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chs_LBL_MECHCOORDPROMPT" xml:space="preserve">
+    <value>机械坐标</value>
+  </data>
+  <data name="en_LBL_MECHCOORDPROMPT" xml:space="preserve">
+    <value>MechCoord</value>
+  </data>
+  <data name="chs_LBL_ANGLESTEP" xml:space="preserve">
+    <value>角步长</value>
+  </data>
+  <data name="chs_LBL_CIRCLEPOINT1" xml:space="preserve">
+    <value>圆上点1</value>
+  </data>
+  <data name="chs_LBL_CIRCLEPOINT2" xml:space="preserve">
+    <value>圆上点2</value>
+  </data>
+  <data name="chs_LBL_CIRCLEPOINT3" xml:space="preserve">
+    <value>圆上点3</value>
+  </data>
+  <data name="chs_LBL_XPROMPT" xml:space="preserve">
+    <value>X坐标</value>
+  </data>
+  <data name="chs_LBL_YPROMPT" xml:space="preserve">
+    <value>Y坐标</value>
+  </data>
+  <data name="en_LBL_ANGLESTEP" xml:space="preserve">
+    <value>AngleStep</value>
+  </data>
+  <data name="en_LBL_CIRCLEPOINT1" xml:space="preserve">
+    <value>Point1OnCircle</value>
+  </data>
+  <data name="en_LBL_CIRCLEPOINT2" xml:space="preserve">
+    <value>Point2OnCircle</value>
+  </data>
+  <data name="en_LBL_CIRCLEPOINT3" xml:space="preserve">
+    <value>Point3OnCircle</value>
+  </data>
+  <data name="en_LBL_XPROMPT" xml:space="preserve">
+    <value>XCoord</value>
+  </data>
+  <data name="en_LBL_YPROMPT" xml:space="preserve">
+    <value>YCoord</value>
+  </data>
+  <data name="chs_CHKB_ENABLETOOLOFFSET" xml:space="preserve">
+    <value>启用工具偏移</value>
+  </data>
+  <data name="chs_LBL_TOOLOFFSETPROMPT" xml:space="preserve">
+    <value>工具偏移</value>
+  </data>
+  <data name="en_CHKB_ENABLETOOLOFFSET" xml:space="preserve">
+    <value>EnableOffset</value>
+  </data>
+  <data name="en_LBL_TOOLOFFSETPROMPT" xml:space="preserve">
+    <value>ToolOffset</value>
+  </data>
+  <data name="chs_LBL_PIXCOORDPROMPT" xml:space="preserve">
+    <value>像素坐标</value>
+  </data>
+  <data name="en_LBL_PIXCOORDPROMPT" xml:space="preserve">
+    <value>PixelCoord</value>
+  </data>
+  <data name="halcondotnet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\halcondotnet.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

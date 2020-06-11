@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2049B64-92AE-48E8-9F6A-BA9E1CC67A37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProVision</RootNamespace>
+    <AssemblyName>ProVision</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>Resources\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calibration\CalibOnPlate\CalibImage.cs" />
+    <Compile Include="Calibration\CalibOnPlate\CalibOnPlateAssistant.cs" />
+    <Compile Include="Calibration\CalibOnPoint\CalibOnPointAssistant.cs" />
+    <Compile Include="Calibration\CalibOnPlate\FrmCalibOnPlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calibration\CalibOnPlate\FrmCalibOnPlate.Designer.cs">
+      <DependentUpon>FrmCalibOnPlate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\CalibOnPoint\FrmCalibOnPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calibration\CalibOnPoint\FrmCalibOnPoint.Designer.cs">
+      <DependentUpon>FrmCalibOnPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\CalibOnPlate\QualityIssue.cs" />
+    <Compile Include="Calibration\CalibOnPlate\QualityProcedures.cs" />
+    <Compile Include="Communal\Defination.cs" />
+    <Compile Include="Communal\FrmMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Communal\FrmMsgBox.designer.cs">
+      <DependentUpon>FrmMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Communal\Functions.cs" />
+    <Compile Include="InteractiveROI\FrmInteractiveROI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractiveROI\FrmInteractiveROI.Designer.cs">
+      <DependentUpon>FrmInteractiveROI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractiveROI\FrmModifyRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractiveROI\FrmModifyRegion.Designer.cs">
+      <DependentUpon>FrmModifyRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractiveROI\GraphicContext.cs" />
+    <Compile Include="InteractiveROI\HObjectEntity.cs" />
+    <Compile Include="InteractiveROI\HWndCtrller.cs" />
+    <Compile Include="InteractiveROI\ROI.cs" />
+    <Compile Include="InteractiveROI\ROIAnnulus.cs" />
+    <Compile Include="InteractiveROI\ROICircle.cs" />
+    <Compile Include="InteractiveROI\ROICircularArc.cs" />
+    <Compile Include="InteractiveROI\ROICross.cs" />
+    <Compile Include="InteractiveROI\ROIManager.cs" />
+    <Compile Include="InteractiveROI\ROILine.cs" />
+    <Compile Include="InteractiveROI\ROIRectangle1.cs" />
+    <Compile Include="InteractiveROI\ROIRectangle2.cs" />
+    <Compile Include="MatchModel\ShapeModel\FrmMatchModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchModel\ShapeModel\FrmMatchModel.Designer.cs">
+      <DependentUpon>FrmMatchModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchModel\ShapeModel\ShapeModelAssistant.cs" />
+    <Compile Include="MatchModel\ShapeModel\ShapeModelOpt.cs" />
+    <Compile Include="MatchModel\ShapeModel\ShapeModelOptAccuracy.cs" />
+    <Compile Include="MatchModel\ShapeModel\ShapeModelOptResults.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classify\" />
+    <Folder Include="OCR\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Calibration\CalibOnPlate\FrmCalibOnPlate.resx">
+      <DependentUpon>FrmCalibOnPlate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calibration\CalibOnPoint\FrmCalibOnPoint.resx">
+      <DependentUpon>FrmCalibOnPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Communal\FrmMsgBox.resx">
+      <DependentUpon>FrmMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteractiveROI\FrmInteractiveROI.resx">
+      <DependentUpon>FrmInteractiveROI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteractiveROI\FrmModifyRegion.resx">
+      <DependentUpon>FrmModifyRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchModel\ShapeModel\FrmMatchModel.resx">
+      <DependentUpon>FrmMatchModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MsgBoxIcon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Location.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\halcondotnet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
