@@ -21,7 +21,22 @@ namespace Simulation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            setting = new ParameterSetting();
+            string path = @"F:\桌面S\智显项目\模板\左边";
+            setting = new ParameterSetting(path,"左边膜");
+            setting.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string path = @"F:\桌面S\智显项目\模板\右边";
+            setting = new ParameterSetting(path, "右边膜");
+            setting.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string path = @"F:\桌面S\智显项目\模板\玻璃";
+            setting = new ParameterSetting(path, "玻璃");
             setting.ShowDialog();
         }
     }
