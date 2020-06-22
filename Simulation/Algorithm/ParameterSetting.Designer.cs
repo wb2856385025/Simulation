@@ -260,7 +260,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(240, 75);
             this.button6.TabIndex = 15;
-            this.button6.Text = "手动测试";
+            this.button6.Text = "匹配模板";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 

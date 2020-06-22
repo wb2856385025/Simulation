@@ -19,8 +19,6 @@ namespace ProVision.MatchModel
         protected System.Drawing.Color _createModelColor; //显示训练图像时窗体的背景颜色
         protected System.Drawing.Color _trainModelColor;  //显示测试图像时的窗体背景颜色
 
-        protected string ModelPath;
-
         protected bool _locked;                 //锁定标记       
         protected bool _specifiedModelPara;     //是否指定模型参数标记
         protected bool _isOnCreateExtractRegion; //当前操作为创建模板提取区域标记
@@ -37,7 +35,7 @@ namespace ProVision.MatchModel
         protected System.Windows.Forms.OpenFileDialog _ofdTestImgs;  //加载测试图像对话框      
 
         protected System.Windows.Forms.FolderBrowserDialog _fbdModelFolder; //加载或者保存模板匹配模型文件夹对话框
-        protected string _imgExtention="jpg"; //图像文件的扩展名
+        protected string _imgExtention; //图像文件的扩展名
         protected System.Windows.Forms.Timer _timer; //定时器
 
         protected ProVision.MatchModel.ShapeModelOpt _matchModelOpt;                  //形状匹配模型优化基类
@@ -97,7 +95,6 @@ namespace ProVision.MatchModel
         /// </summary>
         public HalconDotNet.HTuple CatchModelPose { private set; get; }
 
-
         /// <summary>
         /// 模板搜索区域
         /// </summary>
@@ -108,41 +105,36 @@ namespace ProVision.MatchModel
         /// </summary>
         private bool _isFirstUpdate;
 
+        /// <summary>
+        /// 模板路径
+        /// </summary>
+        private string SavePath;
+
+
         public FrmMatchModel()
         {
             InitializeComponent();
             InitFieldAndProperty();
             _isFirstUpdate = true;
             this.Load += FrmMatchModel_Load;
+            _imgExtention = "bmp";
         }
-        /// <summary>
-        /// 传入用于制作模板图像
-        /// </summary>
-        /// <param name="trainImage"></param>
+
         public FrmMatchModel(HalconDotNet.HObject trainImage):this()
         {
             TransmitTrainImg(trainImage);
         }
-        /// <summary>
-        /// 传入一个保存模板路径和用于制作模板图像
-        /// </summary>
-        /// <param name="trainImage"></param>
-        /// <param name="Path"></param>
-        public FrmMatchModel(HalconDotNet.HObject trainImage,string Path) : this()
+
+        public FrmMatchModel(HalconDotNet.HObject trainImage,string path):this()
         {
             TransmitTrainImg(trainImage);
-            ModelPath = Path;
-        }
-        /// <summary>
-        /// 传入一个保存模板路径
-        /// </summary>
-        /// <param name="Path"></param>
-        public FrmMatchModel(string Path) : this()
-        {
-            ModelPath = Path;
+            SavePath = path;
         }
 
-        
+        public FrmMatchModel(string path):this()
+        {
+            SavePath = path;
+        }
 
         /// <summary>
         /// 传入训练图像--03
@@ -1645,9 +1637,8 @@ namespace ProVision.MatchModel
                         if (SearchRegion != null
                            && SearchRegion.IsInitialized())
                         {
-
-                            if (ModelPath==null)
-                            {                                
+                            if (SavePath == null)
+                            {
                                 _fbdModelFolder.Description = "请选择或者创建一个文件夹";
                                 if (_fbdModelFolder.ShowDialog() == DialogResult.OK)
                                 {
@@ -1659,8 +1650,8 @@ namespace ProVision.MatchModel
                                     HalconDotNet.HOperatorSet.WriteRegion(SearchRegion, folderPath + "\\SearchRegion.hobj");
                                     ModelID = MatchAssistant.ModelID;
                                     ModelPose = MatchAssistant.ModelPose;
-                                    HalconDotNet.HOperatorSet.WriteTuple(ModelPose, folderPath + "\\ModelPose.tup");                                
-                                    switch(MatchAssistant.ModelType)
+                                    HalconDotNet.HOperatorSet.WriteTuple(ModelPose, folderPath + "\\ModelPose.tup");
+                                    switch (MatchAssistant.ModelType)
                                     {
                                         case Communal.MatchModelType.NCCModel:
                                             MatchAssistant.SaveShapeModel(folderPath + "\\ModelFile.ncm");
@@ -1669,13 +1660,13 @@ namespace ProVision.MatchModel
                                         case Communal.MatchModelType.ShapeRegionModel:
                                             MatchAssistant.SaveShapeModel(folderPath + "\\ModelFile.shm");
                                             break;
-                                        default:break;
+                                        default: break;
                                     }
                                 }
                             }
                             else
                             {
-                                string folderPath = ModelPath;
+                                string folderPath = SavePath;
                                 if (_imgExtention == "tif")
                                     _imgExtention = "tiff";
                                 HalconDotNet.HOperatorSet.WriteImage(_currentImage, _imgExtention, new HalconDotNet.HTuple(0), folderPath + "\\TrainImage." + _imgExtention);
