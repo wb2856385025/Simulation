@@ -20,7 +20,7 @@ namespace Simulation.Algorithm
         private HObject SearchRegion;
 
         /// <summary>
-        ///    模板句柄
+        /// 模板句柄
         /// </summary>
         private HTuple ModelFile;
 
@@ -294,7 +294,7 @@ namespace Simulation.Algorithm
                     break;
             }
             
-            HOperatorSet.CountSeconds(out CountTime);
+            HOperatorSet.CountSeconds(out CountTime); 
             bool judge = ReadModelFromFile(_Path);
             if (judge == true)
             {
@@ -306,10 +306,7 @@ namespace Simulation.Algorithm
                     HOperatorSet.CountSeconds(out CountTime1);
                     HOperatorSet.DispObj(_Image,hWindowControl1.HalconWindow);
 
-                    //HObject ImageRotate;
-                    //HOperatorSet.RotateImage(_Image, out ImageRotate, newAngle, "constant");
-                    //HOperatorSet.DispObj(ImageRotate, hWindowControl1.HalconWindow);
-
+                    
                     windowctrlMessage("分数：" + Score.D.ToString("f2"),
                         new HalconDotNet.HTuple("image"),
                         new HalconDotNet.HTuple(1),

@@ -110,7 +110,9 @@ namespace ProVision.MatchModel
         /// </summary>
         private string SavePath;
 
-
+        /// <summary>
+        /// 构造方法
+        /// </summary>
         public FrmMatchModel()
         {
             InitializeComponent();
@@ -119,18 +121,28 @@ namespace ProVision.MatchModel
             this.Load += FrmMatchModel_Load;
             _imgExtention = "bmp";
         }
-
+        /// <summary>
+        /// 构造方法 传入图像
+        /// </summary>
+        /// <param name="trainImage"></param>
         public FrmMatchModel(HalconDotNet.HObject trainImage):this()
         {
             TransmitTrainImg(trainImage);
         }
-
+        /// <summary>
+        /// 构造方法 传入图像和路径
+        /// </summary>
+        /// <param name="trainImage"></param>
+        /// <param name="path"></param>
         public FrmMatchModel(HalconDotNet.HObject trainImage,string path):this()
         {
             TransmitTrainImg(trainImage);
             SavePath = path;
         }
-
+        /// <summary>
+        /// 构造方法 传入路径
+        /// </summary>
+        /// <param name="path"></param>
         public FrmMatchModel(string path):this()
         {
             SavePath = path;
