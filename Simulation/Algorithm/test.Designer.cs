@@ -30,6 +30,7 @@
         {
             DevExpress.XtraEditors.BreadCrumbNode breadCrumbNode1 = new DevExpress.XtraEditors.BreadCrumbNode();
             this.textEdit1 = new DevExpress.XtraEditors.BreadCrumbEdit();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,11 +47,21 @@
             this.textEdit1.Size = new System.Drawing.Size(100, 26);
             this.textEdit1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(525, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1273, 730);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textEdit1);
             this.Name = "test";
             this.Text = "test";
@@ -62,5 +73,6 @@
         #endregion
 
         private DevExpress.XtraEditors.BreadCrumbEdit textEdit1;
+        private System.Windows.Forms.Button button1;
     }
 }
